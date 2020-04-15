@@ -1,3 +1,4 @@
+const sidebar = require('./sidebar')
 module.exports = {
     "title": "日常一记",
     "description": "记录日常知识点",
@@ -93,7 +94,44 @@ module.exports = {
         "logo": "/logo.png",
         "search": true,
         "searchMaxSuggestions": 10,
-        "sidebar": "auto",
+        sidebar: [{
+            title: '力扣',
+            collapsable: true,
+            children: [{
+                    title: '简单',
+                    children: [
+                        'views/leetcode/简单/237.删除链表中的节点',
+                        'views/leetcode/简单/1108.IP地址无效化',
+                        'views/leetcode/简单/1221.分割平衡字符串',
+                        'views/leetcode/简单/1290.二进制链表转整数',
+                        'views/leetcode/简单/1295.统计位数为偶数的数字',
+                        'views/leetcode/简单/1299.将每个元素替换为右侧最大元素',
+                        'views/leetcode/简单/1313.解压缩编码列表',
+                        'views/leetcode/简单/1351.统计有序矩阵中的负数',
+                        'views/leetcode/简单/宝石与石头',
+                        'views/leetcode/简单/猜数字',
+                        'views/leetcode/简单/面试题02.02.返回倒数第k个节点',
+                        'views/leetcode/简单/面试题02.03.删除中间节点',
+                        'views/leetcode/简单/面试题05.替换空格',
+                        'views/leetcode/简单/面试题06.从尾到头打印链表',
+                        'views/leetcode/简单/面试题17.打印从1到最大的n位数',
+                        'views/leetcode/简单/面试题22.链表中倒数第k个节点',
+                        'views/leetcode/简单/面试题24.反转链表',
+                        'views/leetcode/简单/有多少小于当前数字的数字',
+                        'views/leetcode/简单/整数的各位积和之差',
+                        'views/leetcode/简单/左旋转字符串',
+                        'views/leetcode/简单/猜数字',
+                    ]
+                },
+                {
+                    title: '中等',
+                    children: [
+                        'views/leetcode/中等/面试题64.求1+2+…+n',
+                    ]
+                },
+
+            ]
+        }, ],
         "lastUpdated": "Last Updated",
         "author": "linsir",
         "authorAvatar": "/avatar.png",
