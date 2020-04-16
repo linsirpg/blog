@@ -98,7 +98,10 @@ module.exports = {
         "lastUpdated": "Last Updated",
         "author": "linsir",
         "authorAvatar": "/avatar.png",
-        "record": "xxxx",
+        "record": "粤ICP备18099141号",
+        "recordLink": "http://beian.miit.gov.cn/",
+        // "cyberSecurityRecord": "粤ICP备18099141号",
+        // "cyberSecurityLink": "http://beian.miit.gov.cn/",
         "startYear": "2020"
     },
     "markdown": {
