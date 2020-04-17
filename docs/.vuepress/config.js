@@ -78,15 +78,12 @@ module.exports = {
                 "text": "Tag"
             }
         },
-        "friendLink": [
-
-            {
-                "title": "vuepress-theme-reco",
-                "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-                "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-                "link": "https://vuepress-theme-reco.recoluan.com"
-            }
-        ],
+        "friendLink": [{
+            "title": "vuepress-theme-reco",
+            "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+            "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+            "link": "https://vuepress-theme-reco.recoluan.com"
+        }],
         "logo": "/logo.png",
         "search": true,
         "searchMaxSuggestions": 10,
