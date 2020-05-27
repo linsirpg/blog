@@ -34,36 +34,37 @@ module.exports = {
             {
                 "text": "Contact",
                 "icon": "reco-message",
-                "items": [{
-                        "text": "NPM",
-                        "link": "https://www.npmjs.com/~reco_luan",
-                        "icon": "reco-npm"
-                    },
-                    {
-                        "text": "GitHub",
-                        "link": "https://github.com/recoluan",
-                        "icon": "reco-github"
-                    },
-                    {
-                        "text": "简书",
-                        "link": "https://www.jianshu.com/u/cd674a19515e",
-                        "icon": "reco-jianshu"
-                    },
-                    {
-                        "text": "CSDN",
-                        "link": "https://blog.csdn.net/recoluan",
-                        "icon": "reco-csdn"
-                    },
-                    {
-                        "text": "博客圆",
-                        "link": "https://www.cnblogs.com/luanhewei/",
-                        "icon": "reco-bokeyuan"
-                    },
-                    {
-                        "text": "WeChat",
-                        "link": "https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A",
-                        "icon": "reco-wechat"
-                    }
+                "items": [
+                    // {
+                    //     "text": "NPM",
+                    //     "link": "https://www.npmjs.com/~reco_luan",
+                    //     "icon": "reco-npm"
+                    // },
+                    // {
+                    //     "text": "GitHub",
+                    //     "link": "https://github.com/recoluan",
+                    //     "icon": "reco-github"
+                    // },
+                    // {
+                    //     "text": "简书",
+                    //     "link": "https://www.jianshu.com/u/cd674a19515e",
+                    //     "icon": "reco-jianshu"
+                    // },
+                    // {
+                    //     "text": "CSDN",
+                    //     "link": "https://blog.csdn.net/recoluan",
+                    //     "icon": "reco-csdn"
+                    // },
+                    // {
+                    //     "text": "博客圆",
+                    //     "link": "https://www.cnblogs.com/luanhewei/",
+                    //     "icon": "reco-bokeyuan"
+                    // },
+                    // {
+                    //     "text": "WeChat",
+                    //     "link": "https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A",
+                    //     "icon": "reco-wechat"
+                    // }
                 ]
             }
         ],
@@ -90,7 +91,7 @@ module.exports = {
         sidebar,
         "lastUpdated": "Last Updated",
         "author": "linsir",
-        "authorAvatar": "/avatar.png",
+        "authorAvatar": "/flower.png",
         "record": "粤ICP备18099141号",
         "recordLink": "http://beian.miit.gov.cn/",
         // "cyberSecurityRecord": "粤ICP备18099141号",
