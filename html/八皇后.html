@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @param {number} n
+         * @return {string[][]}
+         */
+        var solveNQueens = function (n) {
+            /**
+             * @param {number} n
+             * @return {string[][]}
+             */
+            var posArr = []
+            var resultArr = []
+            var arr = []
+            for (var i = 0; i < n; i++) {
+                for (var j = 0; j < n; j++) {
+                    var item = [i, j];
+                    item.index = -1;
+                    arr.push(item);
+                };
+            };
+            console.log(arr, 'arrarr')
+            function queen(num) {
+                if (num == n) {
+                    resultArr.push(posArr.concat());
+                    return;
+                }
+                for (var i = num * n; i < num * n + n; i++) {
+                    if (arr[i].index == -1) {
+                        arr[i].index = num;
+                        var arrItem = new Array(n).fill(".")
+                        arrItem[i % n] = "Q"
+                        console.log(arrItem, 'arrItem')
+                        posArr.push(arrItem.join(''))
+                        var x = arr[i][0];
+                        var y = arr[i][1];
+                        console.log(arr, 'arr1')
+                        for (var j = 0; j < arr.length; j++) {
+                            if (arr[j].index == -1 && (arr[j][0] == x || arr[j][1] == y || arr[j][0] + arr[j][1] == x + y || arr[j][0] - arr[j][1] == x - y)) {
+                                arr[j].index = num;
+                            }
+                        }
+                        queen(num + 1);
+                        posArr.pop();
+                        for (var j = 0; j < arr.length; j++) {
+                            if (arr[j].index == num) {
+                                arr[j].index = -1;
+                            };
+                        };
+                    };
+                };
+            };
+            queen(0);
+            return resultArr;
+        };
+        console.log(solveNQueens(4))
+    </script>
+</body>
+
+</html>

@@ -22,26 +22,26 @@ module.exports = {
     "theme": "reco",
     "themeConfig": {
         "nav": [{
-                "text": "主页",
-                "link": "/",
-                "icon": "reco-home"
+            "text": "主页",
+            "link": "/",
+            "icon": "reco-home"
+        },
+        {
+            "text": "TimeLine",
+            "link": "/timeline/",
+            "icon": "reco-date"
+        },
+        {
+            "text": "Contact",
+            "icon": "reco-message",
+            "items": [{
+                "text": "GitHub",
+                "link": "https://github.com/linsirpg",
+                "icon": "logo.png"
             },
-            {
-                "text": "TimeLine",
-                "link": "/timeline/",
-                "icon": "reco-date"
-            },
-            {
-                "text": "Contact",
-                "icon": "reco-message",
-                "items": [{
-                        "text": "GitHub",
-                        "link": "https://github.com/linsirpg",
-                        "icon": "logo.png"
-                    },
 
-                ]
-            }
+            ]
+        }
         ],
         "type": "blog",
         "blogConfig": {
@@ -67,7 +67,7 @@ module.exports = {
         "lastUpdated": "Last Updated",
         "author": "linsir",
         "authorAvatar": "/flower.png",
-        "record": "粤ICP备18099141号",
+        "record": "粤ICP备2021175817号",
         "recordLink": "http://beian.miit.gov.cn/",
         // "cyberSecurityRecord": "粤ICP备18099141号",
         // "cyberSecurityLink": "http://beian.miit.gov.cn/",

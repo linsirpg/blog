@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计链表</title>
+</head>
+
+<body>
+    <script>
+
+        var Node = function (element, id) {
+            this.element = element;
+            this.next = null;
+            this.uuid = id
+        }
+        var MyLinkedList = function () {
+            this.head = null;
+            this.length = 0;
+            this.uuid = 1;
+        };
+        MyLinkedList.prototype.get = function (index) {
+            var result = this.display()
+            if (result[index] === undefined) {
+                return -1
+            } else {
+                return result[index]
+            }
+        };
+        MyLinkedList.prototype.addAtHead = function (val) {
+
+            var currNode = new Node(val, ++this.uuid);
+            if (this.head === null) {
+                this.head = currNode
+            } else {
+                currNode.next = this.head;
+                this.head = currNode
+            }
+        };
+        MyLinkedList.prototype.addAtTail = function (val) {
+
+            var currNode = new Node(val, ++this.uuid);
+            var headNode = this.head;
+            if (headNode !== null) {
+                while (headNode.next != null) {
+                    headNode = headNode.next;
+                }
+                headNode.next = currNode
+            } else {
+                this.head = currNode
+            }
+
+        };
+        MyLinkedList.prototype.addAtIndex = function (index, val) {
+            var result = this.displayUuid()
+            if (index <= 0) {
+                this.uuid++
+                this.addAtHead(val)
+            } else if (index == result.length) {
+                this.uuid++
+                this.addAtTail(val)
+            } else if (index <= result.length) {
+                this.uuid++
+                var addIndex = result[index]
+                var currNode = this.head
+                while (currNode.next.uuid != addIndex) {
+                    currNode = currNode.next;
+                }
+                var newNode = new Node(val, this.uuid)
+                newNode.next = currNode.next;
+                currNode.next = newNode
+            }
+        };
+        MyLinkedList.prototype.deleteAtIndex = function (index) {
+            var result = this.displayUuid()
+            var headNode = this.head;
+            var elementVal = result[index];
+            if (result[index] !== undefined) {
+                if (headNode.uuid === elementVal) {
+                    if (headNode.next) {
+                        this.head = headNode.next
+                    } else {
+                        this.head = null
+                    }
+                } else {
+                    while (headNode.next.uuid != elementVal) {
+                        headNode = headNode.next
+                    }
+                    if (headNode.next.next) {
+                        headNode.next = headNode.next.next
+                    } else {
+                        headNode.next = null
+                    }
+                }
+            }
+        };
+        MyLinkedList.prototype.display = function (index) {
+            var result = [];
+            if (this.head != null) {
+                var currNode = this.head;
+                result.push(currNode.element)
+                while (currNode.next != null) {
+                    result.push(currNode.next.element)
+                    currNode = currNode.next
+                }
+            }
+            return result;
+        };
+        MyLinkedList.prototype.displayUuid = function (index) {
+            var result = [];
+            if (this.head != null) {
+                var currNode = this.head;
+                result.push(currNode.uuid)
+                while (currNode.next != null) {
+                    result.push(currNode.next.uuid)
+                    currNode = currNode.next
+                }
+            }
+            return result;
+        };
+    </script>
+</body>
+
+</html>

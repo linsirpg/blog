@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>螺旋矩阵</title>
+</head>
+
+<body>
+    <script>
+        // 顺时针
+        function zj(n) {
+            var arr = []
+            var row = 0
+            var col = 0
+            var min = 0
+            var max = n - 1
+            for (var i = 1; i <= n * n; i++) {
+                if (i <= 5) {
+                    arr.push([])
+                }
+                arr[row][col] = i
+                if (row == min && col < max) {
+                    col++
+                } else if (col == max && row < max) {
+                    row++
+                } else if (row == max && col > min) {
+                    col--
+                } else if (col == min && row > min) {
+                    row--
+                }
+                if (row - 1 == min && col == min) {
+                    min++
+                    max--
+                }
+            }
+            return arr
+        }
+
+        console.log(zj(5))
+
+
+        //逆时针
+        function zj1(n) {
+            var arr = []
+            var row = 0
+            var col = 0
+            var min = 0
+            var max = n - 1
+            for (var j = 1; j <= n * n; j++) {
+                if (j <= 5) {
+                    arr.push([])
+                }
+                arr[row][col] = j
+                if (col == min && row < max) {
+                    row++
+                } else if (row == max && col < max) {
+                    col++
+                } else if (col == max && row > min) {
+                    row--
+                } else if (row == min && col > min) {
+                    col--
+                }
+                if (col - 1 == min && row == min) {
+                    min++
+                    max--
+                }
+            }
+            return arr
+        }
+        console.log(zj1(5))
+
+    </script>
+</body>
+
+</html>
